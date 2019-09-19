@@ -33,7 +33,20 @@
 
         <div id="patientRecordApp">
           <form>
-
+            <div class="form-group">
+              <label for="recordFirstName">First Name</label>
+              <input type="text" v-model="formPatient.firstName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+              <label for="recordLastName">Last Name</label>
+              <input type="text" v-model="formPatient.lastName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+              <label for="recordDOB">DOB</label>
+              <input type="text" v-model="formPatient.DOB" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="mm/dd/yyyy">
+              <label for="recordSexAtBirth">Sex at Birth</label>
+              <input type="text" v-model="formPatient.sexAtBirth" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+            </div>
+            </div>
+            </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
           <table class="table table-sm table-hover">
             <thead>

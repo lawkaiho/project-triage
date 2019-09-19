@@ -2,7 +2,13 @@ var patientRecordApp = new Vue({
   el: '#patientRecordApp',
   data: {
     patients: []
-  },
+  }
+  formPatient: {
+    firstName: '',
+    lastName: '',
+    dob: '',
+    sexAtBirth: ''}
+},
   methods: {
     fetchPatients() {
       fetch('dummy.php')
@@ -10,7 +16,17 @@ var patientRecordApp = new Vue({
       .then(json => { patientRecordApp.patients = json })
     }
   },
-  created() {
+      handlecreatedrecord (event)
+        fetch(url, {method:'post, data:thisFormPatient'})
+        this.patient.push(this.formPatient);
+        this.formPatient = {
+          firstName: '',
+          lastName: '',
+          dob: '',
+          sexAtBirth: ''
+        }
+      }
+        created() {
     this.fetchPatients();
   }
 });
